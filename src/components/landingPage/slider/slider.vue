@@ -1,6 +1,6 @@
 <template>
   <div class="lg:mt-10 mt-0">
-    <carousel :items-to-show="1">
+    <carousel :items-to-show="1" :settings="settings">
       <slide v-for="ind in 2" :key="ind">
         <img
           :src="getImgUrl(ind)"
@@ -26,6 +26,15 @@ export default {
     Carousel,
     Slide,
     Navigation,
+  },
+  data() {
+    return {
+      settings: {
+        itemsToShow: 1,
+        snapAlign: "center",
+        wrapAround: true,
+      },
+    };
   },
   methods: {
     getImgUrl(pet) {

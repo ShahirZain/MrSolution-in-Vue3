@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <navBar />
-  </div>
-  <div class="container">
+  
+  <div class="myWrapper container">
     <div class="flex flex-row">
-      <div class="bg-opacity-10 mt-10 ml-20 mr-10 w-2/5 lg:block hidden">
+      <div class="bg-opacity-10 mt-10 ml-20  mr-10  lg:block hidden">
         <ul>
           <li
             v-for="item in variant"
             :key="item"
-            class="border border-opacity-25 border-blue-900 text-center py-3 hover:border-gray-500"
+            class="border border-opacity-25 border-blue-900 w-32 text-center py-1 hover:border-gray-500"
           >
             {{ item }}
           </li>
@@ -26,14 +24,12 @@
 </template>
 
 <script>
-import navBar from "../landingPage/nav/nav";
 import slider from "../landingPage/slider/slider";
 import FashionProduct from "./fashionProduct";
 
 export default {
   name: "fashion",
   components: {
-    navBar,
     slider,
     FashionProduct,
   },
@@ -54,3 +50,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+.myWrapper.container{
+  width:80%;
+  margin:0 auto;
+}
+</style>

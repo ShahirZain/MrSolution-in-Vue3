@@ -1,10 +1,9 @@
 <template>
-  <navBar />
   <!-- <h1>abc</h1> -->
 
-  <div class="my.container container mx-auto">
+  <div class=" container mx-auto px-4">
     <slider />
-  </div>
+   </div>
   <div>
     <mainCategories />
   </div>
@@ -18,7 +17,6 @@
 </template>
 
 <script>
-import navBar from "./nav/nav";
 import slider from "./slider/slider";
 import mainCategories from "./mainCat/mainCategori";
 import feature from "./features/featureOfSite";
@@ -30,7 +28,6 @@ import { mapState } from "vuex";
 export default {
   name: "home",
   components: {
-    navBar,
     slider,
     mainCategories,
     feature,
@@ -52,3 +49,6 @@ export default {
   },
 };
 </script>
+<style>
+
+</style>
